@@ -1,13 +1,4 @@
 // Cuadrado
-console.group("Cuadrado");
-/* const ladoCuadrado = 4;
-console.log(`Los lados del cuadrado miden: ${ladoCuadrado} cm`);
-
-const perimetroCuadrado = ladoCuadrado * 4;
-console.log(`El perimetro del cuadrado es: ${perimetroCuadrado} cm`); */
-
-/* const areaCuadrado = ladoCuadrado * ladoCuadrado;
-console.log(`El area del cuadrado es: ${areaCuadrado} cm^2`); */
 
 // Perimetro cuadrado
 function perimetroCuadrado(lado) {
@@ -18,57 +9,22 @@ function perimetroCuadrado(lado) {
 function areaCuadrado(lado) {
   return lado * lado;
 }
-console.groupEnd();
 
 // Triangulo
-console.group("Triangulo");
-/* const lado1Triangulo = 4;
-const lado2Triangulo = 4;
-const baseTriangulo = 2;
-const alturaTriangulo = 3.8729;
-
-console.log(
-  `El lado 1 del triangulo mide: ${lado1Triangulo} cm` +
-    `\n` +
-    `El lado 2 del triangulo mide: ${lado2Triangulo} cm` +
-    `\n` +
-    `La base del triangulo mide: ${baseTriangulo} cm` +
-    `\n` +
-    `La altura del triangulo mide: ${alturaTriangulo} cm`
-); */
-
-/* const perimetroTriangulo = lado1Triangulo + lado2Triangulo + baseTriangulo;
-console.log(`El perimetro del triangulo es: ${perimetroTriangulo} cm`); */
-
-/* const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
-console.log(`El area del triangulo es: ${areaTriangulo} cm^2`); */
 
 // Perimetro triangulo
 function perimetroTriangulo(lado1, lado2, base) {
-  return lado1 + lado2 + ladoBase;
+  return lado1 + lado2 + base;
 }
 
 // Area triangulo
 function areaTriangulo(base, altura) {
   return (base * altura) / 2;
 }
-console.groupEnd();
 
 // Circulo
-console.group("Circulo");
+
 const PI = Math.PI;
-/* const diametroCirculo = 5;
-const radioCirculo = diametroCirculo / 2;
-
-console.log(`El valor de pi es: ${PI}`);
-console.log(`El diametro del circulo es: ${diametroCirculo}`);
-console.log(`El radio del circulo es: ${radioCirculo}`); */
-
-/* const perimetroCirculo = PI * diametroCirculo;
-console.log(`El perimetro del circulo es: ${perimetroCirculo}`); */
-
-/* const areaCirculo = PI * radioCirculo * radioCirculo;
-console.log(`El area del circulo es: ${areaCirculo}`); */
 
 // Diametro circulo
 function diametroCirculo(radio) {
@@ -86,4 +42,62 @@ function perimetroCirculo(radio) {
 function areaCirculo(radio) {
   return radio * radio * PI;
 }
-console.groupEnd();
+
+// Aqui interactuamos con HTML
+function calcularPerimetroCuadrado() {
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+
+  const perimetro = perimetroCuadrado(value);
+  alert(perimetro);
+}
+
+function calcularAreaCuadrado() {
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+
+  const area = areaCuadrado(value);
+  alert(area);
+}
+
+function calcularPerimetroTriangulo() {
+  const input_lado1 = document.getElementById("InputTriangulo__lado1");
+  const input_lado2 = document.getElementById("InputTriangulo__lado2");
+  const input_base = document.getElementById("InputTriangulo__base");
+
+  const value_lado1 = Number(input_lado1.value);
+  const value_lado2 = Number(input_lado2.value);
+  const value_base = Number(input_base.value);
+
+  const perimetro = perimetroTriangulo(value_lado1, value_lado2, value_base);
+  alert(perimetro);
+}
+
+function calcularAreaTriangulo() {
+  const input_lado1 = document.getElementById("InputTriangulo__lado1");
+  const input_lado2 = document.getElementById("InputTriangulo__lado2");
+  const input_base = document.getElementById("InputTriangulo__base");
+
+  const value_lado1 = input_lado1.value;
+  const value_lado2 = input_lado2.value;
+  const value_base = input_base.value;
+
+  const area = areaTriangulo(value_lado1, value_lado2, value_base);
+  alert(area);
+}
+
+function calcularPerimetroCirculo() {
+  const input = document.getElementById("InputCirculo");
+  const value = input.value;
+
+  const perimetro = perimetroCirculo(value);
+  alert(perimetro);
+}
+
+function calcularAreaCirculo() {
+  const input = document.getElementById("InputCirculo");
+  const value = input.value;
+
+  const area = areaCirculo(value);
+  alert(area);
+}

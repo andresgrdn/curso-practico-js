@@ -7,11 +7,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Figuras geometricas | Curso practico de JS de Platzi</title>
 
+  <link rel="stylesheet" href="./figuras.css">
+  <link rel="stylesheet" href="./figuras-desktop.css" media="screen and (min-width: 640px)">
   <script src="./figuras.js"></script>
 </head>
 
 <body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title">Figuras geometricas</h1>
+      <p class="header__description">Primer taller</p>
+    </header>
 
+    <section class="tarjeta">
+      <h2 class="tarjeta__title">Calcula el area y perimetro de un cuadrado</h2>
+
+      <form class="tarjeta__form">
+        <label class="tarjeta__label" for="InputCuadrado">Dime cuanto mide un lado de tu cuadrado:</label>
+        <input type="number" class="tarjeta__input" id="InputCuadrado" placeholder="0">
+
+        <button class="tarjeta__button" type="button" onclick="calcularPerimetroCuadrado()">Perimetro</button>
+        <button class="tarjeta__button" type="button" onclick="calcularAreaCuadrado()">Area</button>
+      </form>
+    </section>
+
+    <section class="tarjeta">
+      <h2 class="tarjeta__title">Calcula el area y perimetro de un triangulo</h2>
+
+      <form class="tarjeta__form">
+        <label class="tarjeta__label" for="InputTriangulo__lado1">
+          Dime cuanto mide un lado de tu cuadrado:
+        </label>
+        <input type="number" class="tarjeta__input" id="InputTriangulo__lado1" placeholder="0">
+
+        <label class="tarjeta__label" for="InputTriangulo__lado2">
+          Dime cuanto mide un lado de tu cuadrado:
+        </label>
+        <input type="number" class="tarjeta__input" id="InputTriangulo__lado2" placeholder="0">
+
+        <label class="tarjeta__label" for="InputTriangulo__base">
+          Dime cuanto mide base de tu cuadrado:
+        </label>
+        <input type="number" class="tarjeta__input" id="InputTriangulo__base" placeholder="0">
+
+        <button class="tarjeta__button" type="button" onclick="calcularPerimetroTriangulo()">Perimetro</button>
+        <button class="tarjeta__button" type="button" onclick="calcularAreaTriangulo()">Area</button>
+      </form>
+    </section>
+
+    <section class="tarjeta">
+      <h2 class="tarjeta__title">Calcula el area y perimetro de un circulo</h2>
+
+      <form class="tarjeta__form">
+        <label class="tarjeta__label" for="InputCirculo">
+          Dime cuanto mide el radio de tu circulo:
+        </label>
+        <input type="number" class="tarjeta__input" id="InputCirculo" placeholder="0">
+
+        <button class="tarjeta__button" type="button" onclick="calcularPerimetroCirculo()">Perimetro</button>
+        <button class="tarjeta__button" type="button" onclick="calcularAreaCirculo()">Area</button>
+      </form>
+    </section>
+  </div>
 </body>
 
 </html>
