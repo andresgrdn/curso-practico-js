@@ -33,12 +33,20 @@ console.groupEnd();
 // Triangulo isoceles: encapsulado en una funcion
 
 function alturaTrianguloIsoceles(lado1, lado2, base) {
-  const esIsoceles = lado1 === lado2 && base != lado1;
-
   let altura;
-  if (esIsoceles) {
-    altura = Math.sqrt(lado1 * lado1 - (base / 2) * (base / 2));
-  }
+  if (lado1 != lado2) {
+    console.error("Los lados 1 y 2 no son iguales.");
+  } else if (base > lado1 * 2) {
+    console.error("La base no puede ser mayor a la suma de sus lados.");
+  } else {
+    const adjacent = base / 2;
+    const hipotenusa_sq = lado1 * lado1;
+    const adjacent_sq = adjacent * adjacent;
 
+    // valores negativos invalidos -> altura = NaN
+    const diference = hipotenusa_sq - adjacent_sq;
+
+    altura = Math.sqrt(diference);
+  }
   return altura;
 }
