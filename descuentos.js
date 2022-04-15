@@ -1,39 +1,49 @@
-/* const precioOriginal = 120;
-const descuento = 18; // 20%
+function checkCupon(cuponCode) {
+  const cupones = [
+    { code: "low_code", desc: 5 },
+    { code: "456", desc: 10 },
+    { code: "789", desc: 15 },
+    { code: "101", desc: 20 },
+  ];
 
-const porcentajePrecioOriginalConDescuento = 100 - descuento;
+  const cupon = cupones.find((cupon) => {
+    return cupon.code === cuponCode;
+  });
 
-const precioConDescuento =
-  (precioOriginal * porcentajePrecioOriginalConDescuento) / 100;
+  return cupon;
+}
 
-console.log({
-  precioOriginal,
-  descuento,
-  porcentajePrecioOriginalConDescuento,
-  precioConDescuento,
-}); */
+function calcularPrecioConDescuento(precio, descuento, cuponCode) {
+  const cuponAplicado = checkCupon(cuponCode);
 
-function calcularPrecioConDescuento(precio, descuento) {
-  const porcentajePrecioConDescuento = 100 - descuento;
-  const precioConDescuento = (precio * porcentajePrecioConDescuento) / 100;
+  let sum_desc = Number(descuento);
+  if (cuponAplicado) {
+    sum_desc += cuponAplicado.desc;
+  }
 
-  return precioConDescuento;
+  const porcentaje_menosDescuento = 100 - sum_desc;
+  const precioFinal = (precio * porcentaje_menosDescuento) / 100;
+
+  return precioFinal;
 }
 
 // Interaccion con HTML
 
 function onClickButtonPriceDiscount() {
   const input_price = document.getElementById("InputPrice");
-  const input_discount = document.getElementById("InputPrice");
+  const input_discount = document.getElementById("InputDiscount");
+  const input_cupon = document.getElementById("InputCupon");
 
   const price_value = input_price.value;
   const discount_value = input_discount.value;
+  const cupon_value = input_cupon.value;
 
   const precio_con_descuento = calcularPrecioConDescuento(
     price_value,
-    discount_value
+    discount_value,
+    cupon_value
   );
 
   const resultPrice = document.getElementById("ResultPrice");
-  resultPrice.innerHTML = `El precio con descuento es: $ ${precio_con_descuento}`;
+  resultPrice.innerHTML = `Total con descuentos: $ ${precio_con_descuento}`;
 }

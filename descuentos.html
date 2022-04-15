@@ -7,32 +7,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Descuentos y porcentajes | Curso practico de js Platzi</title>
 
-  <script src="./descuentos.js"></script>
+  <link rel="stylesheet" href="descuentos.css">
 </head>
 
 <body>
-  <header>
-    <h1>Precios y descuentos</h1>
-    <p>Taller 2 del curso</p>
-  </header>
+  <div class="container">
 
-  <section>
-    <h2>Calcula el precio con descuento de tus productos</h2>
+    <header class="header">
+      <h1 class="header__title">Precios y descuentos</h1>
+      <p class="header__description">Taller 2 del curso</p>
+    </header>
 
-    <form>
-      <label for="InputPrice">Ingresa el precio de tu producto</label>
-      <input type="number" id="InputPrice">
+    <section class="card">
+      <h2 class="card__title">Calcula el precio con descuento de tus productos</h2>
 
-      <label for="InputDiscount">Ingresa el descuento a aplicar</label>
-      <input type="number" id="InputDiscount">
+      <form class="card__form">
+        <label class="card__label" for="InputPrice">El precio de del producto va aqui:</label>
+        <input class="card__input" type="number" id="InputPrice" placeholder="Price">
 
-      <button type="button" onclick="onClickButtonPriceDiscount()">
-        Calcular precio con descuento
-      </button>
+        <label class="card__label" for="InputDiscount">El descuento para aplicarlo al precio:</label>
+        <input class="card__input" type="number" id="InputDiscount" placeholder="Discount">
 
-      <p id="ResultPrice"></p>
-    </form>
-  </section>
+        <label class="card__label" for="InputCupon">El cupon puedes ingresarlo aqui:</label>
+        <input class="card__input" type="text" id="InputCupon" placeholder="Cupon">
+
+        <button class="card__button" type="button" onclick="onClickButtonPriceDiscount()">
+          Calcular precio con descuento
+        </button>
+
+        <p id="ResultPrice" class="card__total"></p>
+      </form>
+    </section>
+
+  </div>
+
+  <script src="./descuentos.js"></script>
 </body>
 
 </html>
