@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descuentos y porcentajes | Curso practico de js Platzi</title>
+
+  <link rel="stylesheet" href="descuentos.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1 class="header__title">Precios y descuentos</h1>
+      <p class="header__description">Taller 2 del curso</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card__title">Calcula el precio con descuento de tus productos</h2>
+
+      <form class="card__form">
+        <label class="card__label" for="InputPrice">El precio de del producto va aqui:</label>
+        <input class="card__input" type="number" id="InputPrice" placeholder="Price">
+
+        <label class="card__label" for="InputDiscount">El descuento para aplicarlo al precio:</label>
+        <input class="card__input" type="number" id="InputDiscount" placeholder="Discount">
+
+        <label class="card__label" for="InputCupon">El cupon puedes ingresarlo aqui:</label>
+        <input class="card__input" type="text" id="InputCupon" placeholder="Cupon">
+
+        <button class="card__button" type="button" onclick="onClickButtonPriceDiscount()">
+          Calcular precio con descuento
+        </button>
+
+        <p id="ResultPrice" class="card__total"></p>
+      </form>
+    </section>
+
+  </div>
+
+  <script src="./descuentos.js"></script>
+</body>
+
+</html>
