@@ -20,14 +20,6 @@ function estaEnElUmbral(salario, personasEnDependencia) {
   return msg;
 }
 
-// Comparacion con el SBU
-const salarioBasicoUnificado = 425;
-const salario = 100;
-
-const gapSalarioBasicoUnificado = salario - salarioBasicoUnificado;
-
-console.log(`La diferencia con el SBU es: ${gapSalarioBasicoUnificado}`);
-
 // Interaccion con el HTML
 function verificarUmbral() {
   const input_salario = document.getElementById("InputSalario");
