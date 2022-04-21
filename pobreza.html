@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umbral de pobreza | Curso práctico de JavaScript</title>
+
+  <link rel="stylesheet" href="./pobreza.css">
+</head>
+
+<body>
+  <div class="main-container">
+
+    <header class="header">
+      <h1 class="header__title">Reto calcular umbral de pobreza</h1>
+      <p class="header__description">Calculos del umbral de pobreza en Ecuador</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card__title">Umbral de pobreza</h2>
+      <p class="card__description">Muestra si se encuentra del umbral de pobreza, pobreza extrema o ninguno.</p>
+
+      <form class="card__form">
+        <label class="card__label" for="InputSalario">Salario que recibe</label>
+        <input class="card__input" id="InputSalario" type="number" placeholder="ej. $ 425.00">
+
+        <label class="card__label" for="InputPersonasEnDependencia">Personas que dependen de su salario</label>
+        <input class="card__input" id="InputPersonasEnDependencia" type="number" placeholder="ej. 2 personas">
+
+        <button class="card__button" type="button" onclick="verificarUmbral()">Calcular</button>
+
+        <p class="card__result" id="Resultado"></p>
+      </form>
+    </section>
+
+  </div>
+
+  <script src="./pobreza.js"></script>
+</body>
+
+</html>

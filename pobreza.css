@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #ffcaca;
+  --secondary-color: #283044;
+
+  --primary-color-shadow: #e7b9b9;
+  --primary-color-ligth: #ffdcdc;
+  --secondary-color-shadow: #161a25;
+  --secondary-color-ligth: #3b4663;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  --round-sm: 8px;
+
+  --sm: 16px;
+  --md: 20px;
+  --lg: 24px;
+
+  --bold: 600;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+
+  background-color: var(--secondary-color);
+}
+
+.main-container {
+  border-radius: var(--round-sm);
+  padding: var(--space-md);
+  max-width: 640px;
+
+  background-color: var(--primary-color-shadow);
+}
+
+.header {
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px dashed var(--secondary-color-ligth);
+}
+
+.header__title {
+  margin-bottom: var(--space-sm);
+
+  color: var(--secondary-color-shadow);
+}
+
+.header__description {
+  margin-bottom: var(--space-sm);
+
+  color: var(--secondary-color-ligth);
+}
+
+.card {
+  padding: var(--space-sm) 0;
+}
+
+.card:hover {
+  background-color: var(--primary-color);
+}
+
+.card__title {
+  margin-bottom: var(--space-sm);
+  
+  font-size: var(--md);
+
+  color: var(--secondary-color-shadow);
+}
+
+.card__description {
+  margin-bottom: var(--space-md);
+
+  font-size: var(--sm);
+
+  color: var(--secondary-color-ligth);
+}
+
+.card__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__label {
+  margin-bottom: var(--space-sm);
+
+  font-size: var(--sm);
+
+  color: var(--secondary-color-ligth);
+}
+
+.card__input {
+  margin-bottom: var(--space-md);
+  border: none;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+  height: 40px;
+
+  font-size: var(--sm);
+  text-align: left;
+
+  background-color: var(--primary-color-ligth);
+  color: var(--secondary-color-shadow);
+}
+
+.card__button {
+  margin-bottom: var(--space-md);
+  height: 40px;
+
+  font-weight: var(--bold);
+  font-size: var(--sm);
+
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.card__result {
+  margin-bottom: var(--space-sm);
+  
+  font-size: var(--md);
+
+  color: var(--secondary-color-shadow);
+}
