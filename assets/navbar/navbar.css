@@ -1,0 +1,44 @@
+:root {
+  --iris-60:#A5A6F6;
+
+  --iris-80: #7879F1;
+  
+  --iris-100: #5D5FEF;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  padding: 0 16px;
+  height: 60px;
+
+  background-color: var(--iris-60);
+}
+
+.header__icon {
+  border-radius: 50%;
+  height: 32px;
+}
+
+.header__title {
+  font-size: 2rem;
+}
