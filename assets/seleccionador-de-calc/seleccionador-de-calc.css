@@ -1,0 +1,60 @@
+:root {
+  --iris-60: #A5A6F6;
+
+  --iris-80: #7879F1;
+
+  --iris-100: #5D5FEF;
+
+  --white: #efefff;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+/* Navbar */
+.seleccionador {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  padding: 0 16px;
+  height: 60px;
+
+  list-style: none;
+  overflow: auto;
+}
+
+.seleccionador__button {
+  border: none;
+  border-radius: 4px;
+  padding: 0 16px;
+  min-width: 40px;
+  height: 40px;
+  
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  background-color: var(--iris-100);
+  color: var(--white);
+  box-shadow: inset -1px -1px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(100%, 100%, 100%, 0.5);
+}
+
+.seleccionador__button:active {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5),
+  inset -1px -1px 1px rgba(100%, 100%, 100%, 0.5);
+}
