@@ -11,18 +11,19 @@
 
   <link rel="stylesheet" href="./menu.css">
 
-  <link rel="stylesheet" href="./menu-desplegado.css">
-
-  <link rel="stylesheet" href="./menu-sin-desplegar.css">
+  <link rel="stylesheet" href="./menu-estados.css">
 </head>
 
 <body>
-  <nav class="menu menu--unfolded">
+  <!-- <nav class="menu menu--unfolded"> -->
+  <nav class="menu menu--folded">
     <figure>
-      <img class="menu__icon menu__icon--unfolded" src="./line.svg" alt="line icon">
+      <!--       <img class="menu__icon menu__icon--unfolded" src="./line.svg" alt="line icon"> -->
+      <img class="menu__icon menu__icon--folded" src="./triangle.svg" alt="triangle icon">
     </figure>
 
-    <ul class="temas">
+    <!-- <ul class="temas"> -->
+    <ul class="temas hidden">
       <li>option 1</li>
       <li>option 2</li>
       <li>option 3</li>
@@ -34,10 +35,6 @@
       <li>option 9</li>
       <li>option 10</li>
     </ul>
-  </nav>
-
-  <nav class="menu menu--folded">
-    <img class="menu__icon menu__icon--folded" src="./triangle.svg" alt="triangle icon">
   </nav>
 </body>
 
