@@ -1,28 +1,3 @@
-:root {
-  --iris-60: #A5A6F6;
-
-  --iris-80: #7879F1;
-
-  --iris-100: #5D5FEF;
-
-  --white: #efefff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: Tahoma, sans-serif;
-  font-size: 1.6rem;
-}
-
 /* Option button */
 .option {
   display: flex;

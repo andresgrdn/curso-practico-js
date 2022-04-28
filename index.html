@@ -6,10 +6,68 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora | Andres Gordon</title>
+
+  <!--Main styles-->
+  <link rel="stylesheet" href="./styles/main.css">
+
+  <!--Header-->
+  <link rel="stylesheet" href="./assets/navbar/navbar.css">
+
+  <!--Seleccionador de calcs-->
+  <link rel="stylesheet" href="./assets/seleccionador-de-calc/seleccionador-de-calc.css">
+
+  <!--Calc-->
+  <link rel="stylesheet" href="./assets/calc/calc.css">
+
+  <!--Menu-->
+  <link rel="stylesheet" href="./assets/menu-sin-desplegar/menu-sin-desplegar.css">
+
 </head>
 
 <body>
+  <header class="header">
 
+    <img class="header__icon"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkERppC0x2JFUQUQwUg4ePXvopW2UODCmVKQ&usqp=CAU"
+      alt="Icono en forma de triangulo">
+
+    <h1 class="header__title">Tema de las calculadoras</h1>
+  </header>
+
+  <main>
+    <section>
+      <ul class="seleccionador">
+        <li><button class="seleccionador__button" type="button">calc-1</button>
+        </li>
+        <li><button class="seleccionador__button" type="button">calc-2</button></li>
+        <li><button class="seleccionador__button" type="button">calc-3</button></li>
+        <li><button class="seleccionador__button" type="button">calc-1</button></li>
+        <li><button class="seleccionador__button" type="button">calc-2</button></li>
+        <li><button class="seleccionador__button" type="button">calc-3</button></li>
+        <li><button class="seleccionador__button" type="button">calc-1</button></li>
+        <li><button class="seleccionador__button" type="button">calc-2</button></li>
+        <li><button class="seleccionador__button" type="button">calc-3</button></li>
+      </ul>
+    </section>
+
+    <section class="calc">
+      <h2 class="calc__title">Nombre de la calculadora</h2>
+      <form class="calc__form">
+        <label class="calc__label" for="Input">Instruccion para el dato requerido</label>
+        <input class="calc__input" type="number">
+
+        <button class="calc__button" type="button">Accion sobre los datos</button>
+      </form>
+
+      <p class="calc__result">Resultado de los calculos</p>
+    </section>
+
+    <nav class="menu menu--folded">
+      <img class="menu__icon menu__icon--folded" src="./assets/menu-sin-desplegar/triangle.svg" alt="triangle icon">
+    </nav>
+  </main>
+
+  <footer></footer>
 </body>
 
 </html>
