@@ -1,0 +1,17 @@
+/* Folded menu */
+.menu--folded {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 60px;
+
+  background-color: var(--iris-100);
+}
+
+.menu__icon--folded {
+  width: 12px;
+}
+
+.menu--folded:active {
+  background-color: var(--iris-80);
+}
