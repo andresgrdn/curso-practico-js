@@ -20,7 +20,8 @@
   <link rel="stylesheet" href="./assets/calc/calc.css">
 
   <!--Menu-->
-  <link rel="stylesheet" href="./assets/menu-sin-desplegar/menu-sin-desplegar.css">
+  <link rel="stylesheet" href="./assets/menu/menu.css">
+  <link rel="stylesheet" href="./assets/menu/menu-estados.css">
 
 </head>
 
@@ -63,11 +64,28 @@
     </section>
 
     <nav class="menu menu--folded">
-      <img class="menu__icon menu__icon--folded" src="./assets/menu-sin-desplegar/triangle.svg" alt="triangle icon">
+      <figure onclick="toggleMenuStyles()">
+        <img class="menu__icon menu__icon--unfolded hidden" src="./assets/menu/line.svg" alt="line icon">
+        <img class="menu__icon menu__icon--folded" src="./assets/menu/triangle.svg  " alt="triangle icon">
+      </figure>
+
+      <ul class="temas hidden">
+        <li>option 1</li>
+        <li>option 2</li>
+        <li>option 3</li>
+        <li>option 4</li>
+        <li>option 5</li>
+        <li>option 6</li>
+        <li>option 7</li>
+        <li>option 8</li>
+        <li>option 9</li>
+        <li>option 10</li>
+      </ul>
     </nav>
   </main>
 
   <footer></footer>
+  <script src="./assets/menu/menu.js"></script>
 </body>
 
 </html>
