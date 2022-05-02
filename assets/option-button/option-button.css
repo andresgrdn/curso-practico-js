@@ -9,6 +9,14 @@
   height: 60px;
 }
 
+.option:active {
+  background: var(--iris-100);
+}
+
+.option:active .option__title {
+    color: var(--iris-60);
+}
+
 .option__icono-tema {
   border-radius: 50%;
   width: 40px;
